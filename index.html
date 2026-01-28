@@ -1,0 +1,1179 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pihu Gupta - International Cultural Dancer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: #8A2BE2;
+            --primary-dark: #6A1B9A;
+            --secondary: #FF8C00;
+            --accent: #FF4081;
+            --dark: #1A0033;
+            --light: #F9F5FF;
+            --gray: #F0E6FF;
+            --text: #2D0033;
+            --text-light: #5D4D6B;
+            --shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --gradient: linear-gradient(135deg, #8A2BE2 0%, #6A1B9A 50%, #4A0072 100%);
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        section {
+            padding: 6rem 2rem;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.4);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.2rem 2rem;
+            background: rgba(26, 0, 51, 0.95),transparent;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        /* Hero Section */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1000px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+    .profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 3px;
+}
+
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .tagline {
+            font-size: 2rem;
+            font-style: italic;
+            margin: 1.5rem 0 2.5rem;
+            color: var(--secondary);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            display: inline-block;
+        }
+
+        .tagline::before, .tagline::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent);
+            position: absolute;
+            top: -10px;
+        }
+
+        .tagline::before {
+            left: -30px;
+        }
+
+        .tagline::after {
+            right: -30px;
+        }
+
+        /* Section Styles */
+        .section-light {
+            background-color: white;
+        }
+
+        .section-dark {
+            background-color: var(--gray);
+        }
+
+        .section-gradient {
+            background: linear-gradient(135deg, #F9F5FF 0%, #F0E6FF 100%);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-list li {
+            background-color: white;
+            padding: 1.8rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .about-list li:hover {
+            transform: translateY(-10px);
+            border-left-color: var(--secondary);
+        }
+
+        /* Picture Gallery Section */
+        #picture-gallery {
+            padding-top: 4rem;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-15px);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 0, 51, 0.9), transparent);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Dance Journey Section */
+        .journey-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 4rem auto 0;
+        }
+
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 4rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+            padding-left: 4rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--secondary);
+            top: 10px;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Social Media Section */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .social-card {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 5px solid var(--primary);
+        }
+
+        .social-card:hover {
+            transform: translateY(-15px);
+            border-top-color: var(--secondary);
+        }
+
+        .social-card i {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Contact Form */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: var(--gradient);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            color: white;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group:nth-child(3),
+        .form-group:nth-child(4) {
+            grid-column: 1 / span 2;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        input, select, textarea {
+            padding: 1.2rem;
+            border: 2px solid #E0D6F0;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
+        }
+
+        textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .footer-social a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            h2 {
+                font-size: 2.4rem;
+            }
+            
+            section {
+                padding: 5rem 1.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .journey-timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+            
+            .timeline-item::before {
+                left: 20px !important;
+                right: auto !important;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .profile-pic {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .tagline {
+                font-size: 1.5rem;
+            }
+            
+            form {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group:nth-child(3),
+            .form-group:nth-child(4) {
+                grid-column: 1;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 4rem 1rem;
+            }
+            
+            .profile-pic {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .tagline::before, .tagline::after {
+                display: none;
+            }
+            
+            .social-grid, .about-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-social {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity:1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Pihu Gupta</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#picture-gallery">Pictures</a></li>
+            <li><a href="#dance">Dance Journey</a></li>
+            <li><a href="#modeling">Modeling</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#social-media">Connect</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header with Hero Section -->
+    <header>
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-pic">
+                    <img src="short.jpeg" alt="Pihu Gupta">
+                </div>
+                <h1>Pihu Gupta</h1>
+                <h2 style="color: white;">International Cultural Dancer & Model</h2>
+                <p class="tagline">Duggar Di Kuddi - The Daughter of Dogra Motherland</p>
+                <a href="#contact" class="btn"><i class="fas fa-calendar-check"></i> Book a Performance</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section-light fade-in">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="mo.jpeg" alt="Pihu Gupta performing">
+                    </div>
+                    <div>
+                        <h2>About Pihu Gupta</h2>
+                        <p>Pihu Gupta, known as "Duggar Di Kuddi," is an international cultural dancer and model from Udhampur, Jammu and Kashmir. At just 10 years old, she began her journey to become a cultural ambassador for Dogra heritage, performing traditional dance forms across India and internationally.</p>
+                        
+                        <ul class="about-list">
+                            <li><strong>Date of Birth:</strong> 22 March 2013</li>
+                            <li><strong>Location:</strong> Udhampur, Jammu and Kashmir</li>
+                            <li><strong>Nickname:</strong> "Duggar Di Kuddi" (Daughter of Dogra Land)</li>
+                            <li><strong>Specialization:</strong> Dogra Cultural Dance</li>
+                            <li><strong>Mentor & Icon:</strong> Youth on Beat Dance and Modeling Academy</li>
+                            <li><strong>Organization:</strong> Youth on Beat Organisation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separate Picture Gallery Section -->
+        <section id="picture-gallery" class="section-gradient fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Picture Gallery</h2>
+                    <p>Explore Pihu's journey through performances, cultural events, and modeling portfolio</p>
+                </div>
+                
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="trad.jpeg" alt="Traditional Dance Performance">
+                        <div class="gallery-overlay">
+                            <h4>Traditional Dance Performance</h4>
+                            <p style="color: white">Showcasing Dogra cultural dance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="repre.jpeg" alt="Cultural Event">
+                        <div class="gallery-overlay">
+                            <h4>Cultural Event</h4>
+                            <p style="color: white">Representing Dogra heritage</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="award.jpeg" alt="Award Ceremony">
+                        <div class="gallery-overlay">
+                            <h4>Award Ceremony</h4>
+                            <p style="color: white">Recognizing cultural contribution</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="uu.jpeg" alt="Modeling Portfolio">
+                        <div class="gallery-overlay">
+                            <h4>Modeling Portfolio</h4>
+                            <p style="color: white">Fashion and cultural shows</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="inter.jpeg" alt="Stage Performance">
+                        <div class="gallery-overlay">
+                            <h4>Stage Performance</h4>
+                            <p style="color: white">International cultural event</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="atttire.jpeg" alt="Traditional Attire">
+                        <div class="gallery-overlay">
+                            <h4>Traditional Attire</h4>
+                            <p style="color: white">Showcasing Dogra cultural dress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dance Journey Section -->
+        <section id="dance" class="section-dark fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Dance Journey</h2>
+                    <p>From local stages to international platforms, Pihu's journey as a cultural ambassador</p>
+                </div>
+                
+                <div class="journey-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Beginning of the Journey</h3>
+                            <p>Started dance at age 10 with local competitions in Udhampur, Jammu and Kashmir</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Cultural Ambassador</h3>
+                            <p>Began representing Dogra culture at district and state level events</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>National Recognition</h3>
+                            <p>Performed in more than 10 states across India, showcasing Dogra dance forms</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>International Platform</h3>
+                            <p>Started performing internationally, taking Dogra culture to global audiences</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Mentor & Icon</h3>
+                            <p>Became mentor and icon at Youth on Beat Dance and Modeling Academy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modeling Career Section -->
+        <section id="modeling" class="section-light fade-in">
+            <div class="container">
+                <h2>Modeling Career</h2>
+                <p>Pihu started her modeling career at the age of 12 years old and has since worked with prestigious organizations, combining her cultural heritage with contemporary fashion.</p>
+                
+                <div class="about-list">
+                    <li><strong>NISD (Makeup Academy)</strong> </li>
+                    <li><strong>Fashion Shows:</strong> Walked the ramp for various cultural and fashion events</li>
+                    <li><strong>Promotional Campaigns:</strong> Worked on campaigns promoting cultural preservation and heritage</li>
+                    <li><strong>Brand Collaborations:</strong> Partnered with regional and national brands celebrating Indian culture</li>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section-gradient fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Achievements & Roles</h2>
+                    <p>Recognitions and responsibilities that highlight Pihu's contribution to cultural preservation</p>
+                </div>
+                
+                <div class="social-grid">
+                    <div class="social-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Cultural Ambassador</h3>
+                        <p>Official ambassador for Dogra heritage, representing culture at national and international platforms</p>
+                    </div>
+                    
+                    <div class="social-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Mentor & Icon</h3>
+                        <p>Mentor and icon at Youth on Beat Dance and Modeling Academy, inspiring young dancers</p>
+                    </div>
+                    
+                    <div class="social-card">
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>International Performer</h3>
+                        <p>Performed Dogra cultural dance at international events, showcasing heritage globally</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social-media" class="section-dark fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Connect on Social Media</h2>
+                    <p>Follow Pihu's journey and stay updated with performances and events</p>
+                </div>
+                
+                <div class="social-grid">
+                    <div class="social-card">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Pihu Gupta - Official</h3>
+                        <p><strong> <a href="https://www.instagram.com/_pihu_guptaa?igsh=a3Awbzg0dTlnY3d3">Instagram: @_pihu_guptaa</strong></p>
+                        <p> <a href="https://www.facebook.com/share/17tjHdPRQb/?mibextid=wwXIfr"><strong>Facebook:  Pihu Gupta </a></strong></p>
+                          <p><a href="mailto:pihugupta2869@gmail.com"><strong>Email: pihugupta2869@gmail.com</strong></p>
+                    </div>
+
+                    <div class="social-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Management Contact</h3>
+                        <p><strong>Manager: Laksh Mahajan</strong></p>
+                        <p><a href="https://www.instagram.com/laksh_mahajann"><strong>Instagram: @laksh_mahajann</a></strong></p>
+                        <p><a href="tel:+917006659770"><strong>Phone: +91 70066 59770</a></strong></p>
+                        <p><a href="mailto:laksh7583@gmail.com"><strong>Email: laksh7583@gmail.com</strong></p>
+                    </div>
+
+                    <div class="social-card">
+                        <i class="fas fa-university"></i>
+                        <h3>Organization Contact</h3>
+                        <p><strong>Youth on Beat Organisation</strong></p>
+                        <p><strong><a href="https://www.instagram.com/youth_on_beat_official">@youth_on_beat_official</a></strong></p>
+                        <p><a href="mailto:youthonbeat@gmail.com"><strong>Email: youthonbeat@gmail.com</strong></p>
+                        <p><strong>Location:Udhampur, Jammu and Kashmir</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-light fade-in">
+            <div class="container">
+                <h2>Contact & Inquiries</h2>
+                *
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p style="color: yellow;"><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Udhampur, Jammu and Kashmir</p>
+                        <p style="color: yellow;"><i class="fas fa-clock"></i> <strong>Response Time:</strong> Within 24-48 hours</p>
+                        <p style="color: yellow;"><i class="fas fa-calendar-alt"></i> <strong>Booking Inquiries:</strong> laksh7583@email.com</p>
+                        <p style="color: yellow;"><i class="fas fa-handshake"></i> <strong>Manager:</strong> Laksh Mahajan</p>
+                        
+                        
+                        <div style="margin-top: 2rem;">
+                            <a href="laksh7583@gmail.com" class="btn" style="background: white; color: var(--primary);"><i class="fas fa-envelope"></i> Send Email</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Inquiry Type:</label>
+                                <select id="subject" name="subject">
+                                    <option value="performance">Performance Inquiry</option>
+                                    <option value="workshop">Workshop Request</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="media">Media Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message:</label>
+                                <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Pihu Gupta</div>
+            <p>Duggar Di Kuddi - International Cultural Dancer & Model</p>
+            <p>Ambassador of Dogra Culture & Heritage</p>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/_pihu_guptaa?igsh=a3Awbzg0dTlnY3d3"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/17tjHdPRQb/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <p style="margin-top: 2rem; color: rgba(255,255,255,0.7);"> Pihu Gupta. All Rights Reserved.</p>
+            <p style="color: rgba(255,255,255,0.7);">Udhampur, Jammu and Kashmir, India</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Pihu\'s team will contact you within 24-48 hours.');
+            this.reset();
+        });
+
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        // Initial check
+        fadeInOnScroll();
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Gallery image modal (simplified)
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('img').src;
+                alert('Image clicked! In a full implementation, this would open a larger view of the image.');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
