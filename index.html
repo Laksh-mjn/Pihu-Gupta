@@ -186,7 +186,22 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Navigation */
+        /* Navigation */ /* Navigation */
+       nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background: transparent;   /* fully transparent */
+    backdrop-filter: none;     /* remove blur */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;  
+    color: yellow;        /* remove shadow */
+}
+
         nav {
             position: fixed;
             top: 0;
@@ -1176,4 +1191,5 @@
         });
     </script>
 </body>
+
 </html>
